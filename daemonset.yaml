@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: node-exporter
+  labels:
+    app.kubernetes.io/name: node-exporter
+    
+spec: 
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app.kubernetes.io/name: node-exporter
+        
+    spec: 
+      containers:
+      - name: nginx-container
+        image: nginx
+  
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: node-exporter
+  
+    
