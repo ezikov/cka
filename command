@@ -42,6 +42,9 @@ kubectl describe daemonset kube-proxy --namespace=kube-system
 kubectl get events -owide
 kubectl top node
 kubectl top pod
+kubectl top pod --containers=true --use-protocol-buffers > /opt/outputs/top-container-names.out
+kubectl logs -f pod/log-generator-pod
+kubectl logs webapp-2 -c simple-webapp
 ==========================
 стратегии: recreate, rolling update
 kubectl create -f deploy.yaml --record

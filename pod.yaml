@@ -11,6 +11,8 @@ spec:
   containers:
     - name: nginx-container
       image: nginx
+
+  #nodeName: nod-name    
       
 
   

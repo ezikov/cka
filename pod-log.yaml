@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: log-generator-pod
+  
+
+spec: 
+  containers:
+    - name: log-generator
+      image: rotorocloud/log-generator
+
+    
+      
+
+  
+    
